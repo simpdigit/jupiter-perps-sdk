@@ -213,7 +213,7 @@ impl IncreasePositionPreSwapBuilder {
                     self
     }
             #[inline(always)]
-    pub fn instruction(&mut self, instruction: solana_pubkey::Pubkey) -> &mut Self {
+    pub fn sysvar_instruction(&mut self, instruction: solana_pubkey::Pubkey) -> &mut Self {
                         self.instruction = Some(instruction);
                     self
     }
