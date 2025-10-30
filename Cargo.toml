@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-borsh = "^1.0"
+borsh = { version = "^1.0", features = ["derive"] }
 num-derive = "^0.4"
 num-traits = "^0.2"
 thiserror = "^2.0"
@@ -17,11 +17,11 @@ solana-program-error = "^2.1"
 solana-pubkey = "^2.1"
 serde = { version = "^1.0", optional = true, features = ["derive"] }
 serde_with = { version = "^3.0", optional = true }
-serde_big_array = { version = "^0.5", optional = true }
+serde-big-array = { version = "^0.5", optional = true }
 
 [features]
 default = []
 fetch = ["solana-client"]
-serde = ["dep:serde", "dep:serde_with", "dep:serde_big_array"]
+serde = ["dep:serde", "dep:serde_with", "dep:serde-big-array"]
 anchor = []
 anchor-idl-build = []
